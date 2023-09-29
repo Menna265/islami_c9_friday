@@ -4,8 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_c9/home_screen.dart';
 import 'package:islami_c9/my_theme_data.dart';
 import 'package:islami_c9/sura_details.dart';
-
 import 'hadeth_details.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 
 void main(){
@@ -26,7 +26,12 @@ class MyApp extends StatelessWidget{
      theme:MyThemeData.lightTheme,
 
      darkTheme: MyThemeData.darkTheme,
+
+       localizationsDelegates: AppLocalizations.localizationsDelegates,
+       supportedLocales: AppLocalizations.supportedLocales,
+     locale: Locale('ar'),
    );
+
   }
 
 }

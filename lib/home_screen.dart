@@ -6,6 +6,7 @@ import 'package:islami_c9/tabs/quran_tab.dart';
 import 'package:islami_c9/tabs/radio_tab.dart';
 import 'package:islami_c9/tabs/sebha_tab.dart';
 import 'package:islami_c9/tabs/settings_tab.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName='home';
@@ -26,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
          Scaffold(
            appBar: AppBar(
 
-             title: Text('Islami',style: Theme.of(context).textTheme.bodyLarge),
+             title: Text(AppLocalizations.of(context)!.app_title,style: Theme.of(context).textTheme.bodyLarge),
 
            ),
            bottomNavigationBar: BottomNavigationBar(
@@ -42,11 +43,11 @@ class _HomeScreenState extends State<HomeScreen> {
              },
              items: [
 
-             BottomNavigationBarItem(icon:ImageIcon(AssetImage('assets/images/radio.png')),label: 'radio',backgroundColor:MyThemeData.primaryColor),
-               BottomNavigationBarItem(icon:ImageIcon(AssetImage('assets/images/sebha.png')),label: 'sebha',backgroundColor: MyThemeData.primaryColor),
-               BottomNavigationBarItem(icon:ImageIcon(AssetImage('assets/images/ahadeth.png')),label: 'ahadeth',backgroundColor: MyThemeData.primaryColor),
-               BottomNavigationBarItem(icon:ImageIcon(AssetImage('assets/images/moshaf.png')),label: 'quran',backgroundColor: MyThemeData.primaryColor),
-               BottomNavigationBarItem(icon:Icon(Icons.settings),label: 'setting',backgroundColor: MyThemeData.primaryColor),
+             BottomNavigationBarItem(icon:ImageIcon(AssetImage('assets/images/radio.png')),label: AppLocalizations.of(context)!.radio,backgroundColor:MyThemeData.primaryColor),
+               BottomNavigationBarItem(icon:ImageIcon(AssetImage('assets/images/sebha.png')),label: AppLocalizations.of(context)!.tasbeh,backgroundColor: MyThemeData.primaryColor),
+               BottomNavigationBarItem(icon:ImageIcon(AssetImage('assets/images/ahadeth.png')),label: AppLocalizations.of(context)!.hadeth,backgroundColor: MyThemeData.primaryColor),
+               BottomNavigationBarItem(icon:ImageIcon(AssetImage('assets/images/moshaf.png')),label: AppLocalizations.of(context)!.quran,backgroundColor: MyThemeData.primaryColor),
+               BottomNavigationBarItem(icon:Icon(Icons.settings),label: AppLocalizations.of(context)!.settings,backgroundColor: MyThemeData.primaryColor),
            ],
 
            ),

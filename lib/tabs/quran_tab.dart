@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:islami_c9/my_theme_data.dart';
 import 'package:islami_c9/sura_details.dart';
 import 'package:islami_c9/sura_model.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class QuranTab extends StatelessWidget {
   List<String>quran=["الفاتحه","البقرة","آل عمران","النساء","المائدة","الأنعام","الأعراف","الأنفال","التوبة","يونس","هود"
@@ -27,7 +28,7 @@ class QuranTab extends StatelessWidget {
             thickness: 2,
             color: MyThemeData.primaryColor,
           ),
-          Text('Sura Name',style: Theme.of(context).textTheme.bodyLarge!.copyWith(color:MyThemeData.blackColor),),
+          Text(AppLocalizations.of(context)!.sura_name,style: Theme.of(context).textTheme.bodyLarge!.copyWith(color:MyThemeData.blackColor),),
 
 
 
