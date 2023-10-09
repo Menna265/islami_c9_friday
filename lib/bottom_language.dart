@@ -24,6 +24,7 @@ class _BottomLanguageState extends State<BottomLanguage> {
       InkWell(
         onTap: (){
           provider.changeLanguage('en');
+          Navigator.pop(context);
         },
         child:provider.appLanguage =='en'?
             getSelected(AppLocalizations.of(context)!.english)
@@ -33,6 +34,7 @@ class _BottomLanguageState extends State<BottomLanguage> {
       InkWell(
         onTap: (){
           provider.changeLanguage('ar');
+          Navigator.pop(context);
         },
         child:provider.appLanguage=='ar'?
             getSelected(AppLocalizations.of(context)!.arabic)

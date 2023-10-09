@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:islami_c9/bottom-mode.dart';
 import 'package:islami_c9/bottom_language.dart';
 import 'package:islami_c9/my_theme_data.dart';
 import 'package:islami_c9/providers/app_config_provider.dart';
@@ -25,7 +26,7 @@ class _SettingsTabState extends State<SettingsTab> {
             style: Theme.of(context)
                 .textTheme
                 .bodyMedium!
-                .copyWith(color: Colors.black),
+                .copyWith(color: Theme.of(context).colorScheme.background),
           ),
           SizedBox(
             height: 15,
@@ -56,6 +57,42 @@ class _SettingsTabState extends State<SettingsTab> {
               ),
             ),
           ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            AppLocalizations.of(context)!.mode,
+            style: Theme.of(context)
+                .textTheme
+                .bodyMedium!
+                .copyWith(color: Theme.of(context).colorScheme.background),
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          InkWell(
+            onTap: () {
+              viewMode();
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                color: MyThemeData.primaryColor,
+                borderRadius: BorderRadius.circular(25),
+              ),
+              padding: EdgeInsets.all(10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(provider.appTheme==ThemeMode.light?"Light":"Dark",
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodyMedium!
+                          .copyWith(color: Colors.black)),
+                  Icon(Icons.arrow_drop_down),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );
@@ -64,5 +101,15 @@ class _SettingsTabState extends State<SettingsTab> {
   void viewLanguage() {
     showModalBottomSheet(
         context: context, builder: (context) => BottomLanguage());
+  }
+
+  void viewMode() {
+    showModalBottomSheet(
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(15), topRight: Radius.circular(15))),
+      context: context,
+      builder: (context) => BottomMode(),
+    );
   }
 }

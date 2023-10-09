@@ -31,7 +31,7 @@ class _HadethDetailsState extends State<HadethDetails> {
           appBar: AppBar(
             title: Text(
               args.title,
-              style: Theme.of(context).textTheme.bodyLarge,
+              style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: Theme.of(context).colorScheme.background)
             ),
           ),
           body: Padding(
@@ -50,7 +50,7 @@ class _HadethDetailsState extends State<HadethDetails> {
                   itemBuilder: (context, index) {
                     return Text(args.content[index],
                       style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                        color: Colors.black87,
+                        color: Theme.of(context).colorScheme.background,
                       ),
                       textAlign: TextAlign.center,);
                   },

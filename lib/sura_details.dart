@@ -53,7 +53,7 @@ class _SuraDetailsState extends State<SuraDetails> {
                   itemBuilder: (context, index) {
                     return Text(verses[index],
                         style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                              color: Colors.black87,
+                              color: Theme.of(context).colorScheme.background,
                             ),
                         textAlign: TextAlign.center,);
                   },

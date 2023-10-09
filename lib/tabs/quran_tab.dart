@@ -28,7 +28,7 @@ class QuranTab extends StatelessWidget {
             thickness: 2,
             color: MyThemeData.primaryColor,
           ),
-          Text(AppLocalizations.of(context)!.sura_name,style: Theme.of(context).textTheme.bodyLarge!.copyWith(color:MyThemeData.blackColor),),
+          Text(AppLocalizations.of(context)!.sura_name,style: Theme.of(context).textTheme.bodyLarge!.copyWith(color:Theme.of(context).colorScheme.onPrimary),),
 
 
 
@@ -50,7 +50,7 @@ class QuranTab extends StatelessWidget {
                        Navigator.pushNamed(context, SuraDetails.routeName,
                            arguments:SuraModel(name: quran[index], index: index) );
                      },
-                      child: Text(quran[index],style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: MyThemeData.blackColor))),);
+                      child: Text(quran[index],style: Theme.of(context).textTheme.bodyMedium!.copyWith(color:Theme.of(context).colorScheme.onPrimary))),);
                 },
                 itemCount: quran.length),
           ),

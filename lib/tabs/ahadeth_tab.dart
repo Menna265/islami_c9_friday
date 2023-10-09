@@ -38,7 +38,7 @@ class _AhadethTabState extends State<AhadethTab> {
             style: Theme.of(context)
                 .textTheme
                 .bodyLarge!
-                .copyWith(color: MyThemeData.blackColor),
+                .copyWith(color:Theme.of(context).colorScheme.onPrimary),
           ),
 
           Divider(
@@ -59,7 +59,7 @@ class _AhadethTabState extends State<AhadethTab> {
                       style: Theme.of(context)
                           .textTheme
                           .bodyMedium!
-                          .copyWith(color: MyThemeData.blackColor),
+                          .copyWith(color: Theme.of(context).colorScheme.onPrimary),
                   textDirection: TextDirection.rtl,),
                 ),
               );

@@ -14,5 +14,6 @@
   "arabic": "Arabic",
   "light": "Light",
   "dark": "Dark",
-  "theme": "Theme"
+  "theme": "Theme",
+  "mode": "Mode"
 }
